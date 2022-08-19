@@ -39,16 +39,16 @@ body {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -25%)
+  transform: translate(-50%, -25%);
 }
 
 .intro {
-  padding: 64px 24px 0px 24px;
+  padding: 64px 24px 0 24px;
   text-align: center;
 }
 
 .intro-description {
-  color: #172B4D;
+  color: #172b4d;
 }
 
 #into-background {
@@ -64,7 +64,7 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: #172B4D;
+  color: #172b4d;
 }
 
 .social {
@@ -73,19 +73,19 @@ body {
 }
 
 .social i {
-  color: #505F79;
+  color: #505f79;
 }
 
 .next-section {
   margin-top: 60px;
-  height: 48px;  
+  height: 48px;
 }
 
 .green {
-  color : #36B37E;
+  color: #36B37E;
 }
 
 .next-section-svg {
-  width: 32px; 
+  width: 32px;
   height: 32px;
 }
