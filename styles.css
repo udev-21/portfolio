@@ -113,3 +113,11 @@ body {
 .green {
   color : #36b37e;
 }
+
+.next-section-svg {
+  width: 32px; 
+  height: 32px;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+}
