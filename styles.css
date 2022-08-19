@@ -3,7 +3,6 @@ body {
   padding: 0px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  
 }
 
 .toolbar-container {
@@ -33,14 +32,16 @@ body {
   width: 40px;
   text-align: center;
   vertical-align: middle;
-  margin-right:  24px ;
+  margin-right:  24px;
 }
+
 .icon-wrapper {
   position:relative;
   top:50%;
   left:50%;
   transform:translate(-50%,-25%)
 }
+
 .toggle-button {
   display: flex;
   flex-direction: column;
@@ -77,7 +78,6 @@ body {
 
 #into-background {
   z-index: -1;
-  /* display: inline; */
   overflow: hidden;
   position: fixed;
   top: -70px;
@@ -86,13 +86,9 @@ body {
 }
 
 .greeting {
-  /* margin: 64px 24px 0px 24px; */
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-
-
-  /* Neutrals/N800 */
   color: #172B4D;
 }
 
@@ -117,7 +113,4 @@ body {
 .next-section-svg {
   width: 32px; 
   height: 32px;
-  vertical-align: middle;
-  fill: currentColor;
-  overflow: hidden;
 }
