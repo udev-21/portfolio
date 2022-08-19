@@ -39,32 +39,7 @@ body {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-25%)
-}
-
-.toggle-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.toggle-button > .line {
-  width: 16px;
-  background-color: black;
-  border-radius: 8px;
-  display: inline-block;
-  margin: 0 4px;
-  border: 2px solid rgb(40, 53, 47);
-}
-
-.toggle-button > .line:nth-child(1){
-  margin-top: 7px;
-  margin-bottom: 5px;
-}
-
-.toggle-button > .line:last-child{
-  margin-bottom: 7px;
-  margin-top: 5px;
+  transform: translate(-50%, -25%)
 }
 
 .intro {
@@ -73,7 +48,7 @@ body {
 }
 
 .intro-description {
-  color: #172b4d;
+  color: #172B4D;
 }
 
 #into-background {
@@ -107,7 +82,7 @@ body {
 }
 
 .green {
-  color : #36b37e;
+  color : #36B37E;
 }
 
 .next-section-svg {
