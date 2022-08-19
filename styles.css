@@ -21,9 +21,11 @@ body {
   line-height: 28px;
 }
 
-.welcome > p {
+.welcome > a {
   display: inline-block;
   margin: 10px 0 10px 12px;
+  color: #28352F;
+  text-decoration: none;
 }
 
 .toggle-wrapper {
