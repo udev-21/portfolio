@@ -1,3 +1,7 @@
+:root{
+  --black: #172B4d;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -45,28 +49,32 @@ body {
 }
 
 .intro {
+  position: relative;
   padding: 64px 24px 0 24px;
   text-align: center;
+  overflow: hidden;
 }
 
 .intro-description {
-  color: #172b4d;
+  color: var(--black);
 }
+
 
 #into-background {
   z-index: -1;
   overflow: hidden;
-  position: fixed;
-  top: -100px;
-  left: -156px;
-  height: 86vh;
+  position: absolute;
+  top: -182px;
+  left: -238px;
+  max-height: 109vh;
+
 }
 
 .greeting {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: #172b4d;
+  color: var(--black);
 }
 
 .social {
@@ -100,4 +108,120 @@ body {
 .next-section-svg {
   width: 32px;
   height: 32px;
+}
+
+
+.recent-works {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--black);
+  margin: 0;
+  font-weight: 700;
+}
+
+.indicator {
+  width: 48px;
+  height: 4px;
+  background: #36B37E;
+  border-radius: 24px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.projects {
+  margin-top: 60px;
+  display: grid;
+  grid-gap: 24px 0;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #EBF0EE;
+  border: 1px solid #D0D9D4;
+  border-radius: 8px;
+  height: 470px;
+  min-width: 330px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.project-info {
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  row-gap: 16px;
+  min-height: 220px;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3A4A42;
+  text-align: center;
+}
+
+.project-stacks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 8px;
+}
+
+.project-stacks > div {
+  background: #EBF0EE;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  padding: 8px 12px;
+}
+
+.button-wrapper {
+  display: inherit;
+}
+
+
+.button {
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid #36B37F;
+  color: #fff;
+  background: #36B37F;
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+section.about-me {
+  margin-top: 64px;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-me-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #42526E;
 }
