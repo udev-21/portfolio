@@ -1,5 +1,6 @@
-:root{
-  --black: #172B4d;
+:root {
+  --black: #172b4d;
+  --green: #36b37e;
 }
 
 body {
@@ -102,7 +103,7 @@ body {
 }
 
 .green {
-  color: #36b37e;
+  color: var(--green);
 }
 
 .next-section-svg {
@@ -131,7 +132,7 @@ body {
 .indicator {
   width: 48px;
   height: 4px;
-  background: #36B37E;
+  background: var(--green);
   border-radius: 24px;
   margin: 0 auto;
   margin-top: 24px;
@@ -145,8 +146,8 @@ body {
 }
 
 .project-card {
-  background-color: #EBF0EE;
-  border: 1px solid #D0D9D4;
+  background-color: #ebf0ee;
+  border: 1px solid #d0d9d4;
   border-radius: 8px;
   height: 470px;
   min-width: 330px;
@@ -180,7 +181,7 @@ body {
 }
 
 .project-stacks > div {
-  background: #EBF0EE;
+  background: #ebf0ee;
   border-radius: 4px;
   font-weight: 600;
   font-size: 12px;
@@ -193,13 +194,12 @@ body {
   display: inherit;
 }
 
-
 .button {
   display: inline-block;
   margin: 0 auto;
-  border: 1px solid #36B37F;
+  border: 1px solid var(--green);
   color: #fff;
-  background: #36B37F;
+  background: var(--green);
   border-radius: 4px;
   padding: 12px;
   font-weight: 500;
@@ -237,7 +237,7 @@ section.about-me {
   min-height: 350px;
   min-width: 325px;
   background-color: #ebf0ee;
-  border: 1px solid #C1C7D0;
+  border: 1px solid #c1c7d0;
   border-radius: 8px;
   margin: 0 12px;
   display: flex;
@@ -254,7 +254,6 @@ section.about-me {
   margin: 24px 0;
   height: 80px;
   width: 80px;
-  display: inline-block;
   order: -1;
   border-radius: 50%;
   background-color: #fff;
@@ -278,12 +277,11 @@ section.about-me {
 }
 
 .card-tags {
-  margin-top: 24px 28px 0 28px;
+  margin: 24px 28px 0 28px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px 8px;
-  margin-top: 24px;
 }
 
 .card-tag {
