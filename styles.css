@@ -58,6 +58,10 @@ body {
 
 .intro-description {
   color: var(--black);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
 }
 
 #into-background {
