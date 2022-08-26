@@ -1,3 +1,8 @@
+:root {
+  --black: #172b4d;
+  --green: #36b37e;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -45,28 +50,34 @@ body {
 }
 
 .intro {
+  position: relative;
   padding: 64px 24px 0 24px;
   text-align: center;
+  overflow: hidden;
 }
 
 .intro-description {
-  color: #172b4d;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
 }
 
 #into-background {
   z-index: -1;
   overflow: hidden;
-  position: fixed;
-  top: -100px;
-  left: -156px;
-  height: 86vh;
+  position: absolute;
+  top: -182px;
+  left: -238px;
+  max-height: 109vh;
 }
 
 .greeting {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  color: #172b4d;
+  color: var(--black);
 }
 
 .social {
@@ -94,10 +105,202 @@ body {
 }
 
 .green {
-  color: #36b37e;
+  color: var(--green);
 }
 
 .next-section-svg {
   width: 32px;
   height: 32px;
+}
+
+.recent-works {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--black);
+  margin: 0;
+  font-weight: 700;
+}
+
+.indicator {
+  width: 48px;
+  height: 4px;
+  background: var(--green);
+  border-radius: 24px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.projects {
+  margin-top: 60px;
+  display: grid;
+  grid-gap: 24px 0;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #ebf0ee;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+  height: 470px;
+  min-width: 330px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.project-info {
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  row-gap: 16px;
+  min-height: 220px;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3a4a42;
+  text-align: center;
+}
+
+.project-stacks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 8px;
+}
+
+.project-stacks > div {
+  background: #ebf0ee;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  padding: 8px 12px;
+}
+
+.button-wrapper {
+  display: inherit;
+}
+
+.button {
+  user-select: none;
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid var(--green);
+  color: #fff;
+  background: var(--green);
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.button:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.button:active {
+  background-color: #008552;
+}
+
+section.about-me {
+  margin-top: 64px;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-me-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #42526e;
+}
+
+.cards {
+  display: grid;
+  grid-row-gap: 24px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.card {
+  min-height: 350px;
+  min-width: 325px;
+  background-color: #ebf0ee;
+  border: 1px solid #c1c7d0;
+  border-radius: 8px;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.card-info {
+  margin-top: 40px;
+}
+
+.card-icon-wrapper {
+  margin: 24px 0;
+  height: 80px;
+  width: 80px;
+  order: -1;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon-wrapper > img {
+  width: 48px;
+  height: 48px;
+}
+
+.card-title {
+  height: 32px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #344563;
+}
+
+.card-tags {
+  margin: 24px 28px 0 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 8px;
+}
+
+.card-tag {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: var(--green);
 }
