@@ -370,6 +370,7 @@ a.mail-to {
     padding-bottom: 60px;
     background-color: transparent;
   }
+
   .contact-form > .background-images {
     position: absolute;
     display: inherit;
@@ -430,7 +431,7 @@ a.mail-to {
 
   .projects {
     grid-template-columns: repeat(3, auto);
-  } 
+  }
 
   .project-card {
     width: 370px;
@@ -467,6 +468,7 @@ a.mail-to {
     margin: 0 auto;
     justify-content: space-around;
   }
+
   .my-email {
     display: none;
   }
@@ -479,14 +481,14 @@ a.mail-to {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
-  
+
   form > button {
     position: relative;
     left: -86px;
   }
-  
+
   .input {
-    max-width: unset; 
+    max-width: unset;
   }
 
   .input:nth-child(n + 3) {
