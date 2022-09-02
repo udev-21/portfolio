@@ -10,23 +10,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="toolbar-container">
-        <div class="welcome">
-            <a href="#">Welcome</a>
-        </div>
-        <nav class="toggle-wrapper">
-            <div class="icon-wrapper">
-                <i class="fa-solid fa-bars fa-lg"></i>
-            </div>
-        </nav>
-    </header>
+    
     <section class="intro">
+        <header class="toolbar-container">
+            <div class="welcome desktop-only">
+                <a href="#">Welcome</a>
+            </div>
+            <nav class="toggle-wrapper">
+                <ul class="desktop-only">
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                </div>
+            </nav>
+        </header>
         <div class="greeting">
             <h1>Hey there. I’m Sharof</h1>
             <h2 class="green">I’m a software developer</h2>
         </div>
         <p class="intro-description">
-            I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, 
+            I can help you build a product, feature or website Look through some of my work and<span class="newline"></span> experience! If you like what you see and have a project you need coded,<span class="newline"></span>  
             don’t hestiate to contact me.
         </p>
         <section class="social">
@@ -41,19 +47,17 @@
         <div class="next-section">
             <img class="next-section-svg" src="assets/icons/round-arrow-down.svg" alt="">
         </div>
-        <div class="background-image-wrapper">
-            <img id="into-background" src="assets/images/background-mobile.svg" alt="">
-        </div>
         
     </section>
     <section class="recent-works">
         <h2 class="section-title">My Recent Works</h2>
         <div class="indicator"></div>
         <div class="projects">
+            
             <div class="project-card">
                 <div class="project-info">
                     <div class="project-title">
-                        Multi-Post Stories Gain+Glory
+                        Multi-Post Stories <span class="newline"></span> Gain+Glory
                     </div>
                     <div class="project-stacks">
                         <div>Ruby on Rails</div>
@@ -66,10 +70,12 @@
                     </div>
                 </div>
             </div>
+
+            
             <div class="project-card">
                 <div class="project-info">
                     <div class="project-title">
-                        Multi-Post Stories Gain+Glory
+                        Multi-Post Stories <span class="newline"></span> Gain+Glory
                     </div>
                     <div class="project-stacks">
                         <div>Ruby on Rails</div>
@@ -82,10 +88,63 @@
                     </div>
                 </div>
             </div>
+
+            
             <div class="project-card">
                 <div class="project-info">
                     <div class="project-title">
-                        Multi-Post Stories Gain+Glory
+                        Multi-Post Stories <span class="newline"></span> Gain+Glory
+                    </div>
+                    <div class="project-stacks">
+                        <div>Ruby on Rails</div>
+                        <div>css</div>
+                        <div>JavaScript</div>
+                        <div>html</div>
+                    </div>
+                    <div class="button-wrapper">
+                        <a  href="#" class="button">See Project</a> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="project-title">
+                        Multi-Post Stories <span class="newline"></span> Gain+Glory
+                    </div>
+                    <div class="project-stacks">
+                        <div>Ruby on Rails</div>
+                        <div>css</div>
+                        <div>JavaScript</div>
+                        <div>html</div>
+                    </div>
+                    <div class="button-wrapper">
+                        <a  href="#" class="button">See Project</a> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="project-title">
+                        Multi-Post Stories <span class="newline"></span> Gain+Glory
+                    </div>
+                    <div class="project-stacks">
+                        <div>Ruby on Rails</div>
+                        <div>css</div>
+                        <div>JavaScript</div>
+                        <div>html</div>
+                    </div>
+                    <div class="button-wrapper">
+                        <a  href="#" class="button">See Project</a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="project-title">
+                        Multi-Post Stories <span class="newline"></span> Gain+Glory
                     </div>
                     <div class="project-stacks">
                         <div>Ruby on Rails</div>
@@ -102,8 +161,9 @@
     </section>
     <section class="about-me">
         <h2 class="section-title">About me</h2>
-        <p class="about-me-text">I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, 
-            don’t hestiate to contact me.</p>
+        <p class="about-me-text">I can help you build a product, feature or website Look through some of my work and<span class="newline"></span> experience! If you like what you see and have a project you need coded,<span class="newline"></span>  
+            don’t hestiate to contact me.
+        </p>
         <div class="button-wrapper">
             <a  href="#" class="button">Get My Resume</a> 
         </div>
@@ -165,24 +225,32 @@
     <section class="contact-form">
         <h2 class="contact-title">I'm interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
         <form action="https://formspree.io/f/mnqrnyba" method="POST">
-            <input type="text" name="fullname" class="input" placeholder="Fullname" maxlength="30" required>
+            <input type="text" name="fullname" class="input" placeholder="Firstname" maxlength="30" required>
+            <input type="text" class="input" name="lastname" placeholder="Lastname" maxlength="30" required>
             <input type="email" name="email" class="input" placeholder="Email address" required>
             <textarea name="message" id="message" class="input message" cols="30" rows="10" placeholder="Enter text here" maxlength="500" required></textarea>
             <button type="submit" name="submit" class="button">Get in touch</button>
-            <section class="social">
-                <ul>
-                    <li><a href="twitter.com/udev211"><img src="assets/icons/twitter.svg" alt="twitter"></a></li>
-                    <li><a href="linkedin.com/in/udev21"><img src="assets/icons/linkedin.svg" alt="linkedin"></a> </li>
-                    <li><a href="#"><img src="assets/icons/medium.svg" alt="medium"></a> </li>
-                    <li><a href="github.com/udev-21"><img src="assets/icons/github.svg" alt="github"></a> </li>
-                    <li><a href="#"><img src="assets/icons/angellist.svg" alt="angellist"></a> </li>
-                </ul> 
-            </section>
-            <section class="my-email">
-                <a class="mail-to" href="mailto:udev21@gmail.com">udev21@gmail.com</a>
-            </section>
         </form>
+        <div class="background-images">
+            <img src="assets/images/contact-frame1.svg" id="contact-frame1" alt="contact-frame1">
+            <img src="assets/images/contact-frame2.svg" id="contact-frame2" alt="contact-frame2">
+            <img src="assets/images/contact-frame3.svg" id="contact-frame3" alt="contact-frame3">
+        </div>
     </section>
+    <footer>
+        <section class="social">
+            <ul>
+                <li><a href="twitter.com/udev211"><img src="assets/icons/twitter.svg" alt="twitter"></a></li>
+                <li><a href="linkedin.com/in/udev21"><img src="assets/icons/linkedin.svg" alt="linkedin"></a> </li>
+                <li><a href="#"><img src="assets/icons/medium.svg" alt="medium"></a> </li>
+                <li><a href="github.com/udev-21"><img src="assets/icons/github.svg" alt="github"></a> </li>
+                <li><a href="#"><img src="assets/icons/angellist.svg" alt="angellist"></a> </li>
+            </ul> 
+        </section>
+        <section class="my-email">
+            <a class="mail-to" href="mailto:udev21@gmail.com">udev21@gmail.com</a>
+        </section>
+    </footer>
 </body> 
 </html>
 

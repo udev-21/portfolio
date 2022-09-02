@@ -51,9 +51,10 @@ body {
 
 .intro {
   position: relative;
-  padding: 64px 24px 0 24px;
+  padding: 24px 24px 0 24px;
   text-align: center;
   overflow: hidden;
+  background: url("assets/images/background-mobile.svg") no-repeat center center;
 }
 
 .intro-description {
@@ -79,6 +80,11 @@ body {
   font-size: 40px;
   line-height: 52px;
   color: var(--black);
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 .social {
@@ -142,7 +148,7 @@ body {
 .projects {
   margin-top: 60px;
   display: grid;
-  grid-gap: 24px 0;
+  grid-gap: 24px;
   justify-content: center;
 }
 
@@ -164,6 +170,7 @@ body {
   padding: 16px;
   row-gap: 16px;
   min-height: 220px;
+  width: 100%;
 }
 
 .project-title {
@@ -349,3 +356,154 @@ a.mail-to {
 .my-email {
   margin: 20px 0 40px 0;
 }
+
+nav > ul {
+  display: none;
+}
+
+.contact-form > .background-images {
+  display: none;
+} 
+
+
+@media screen and (min-width: 1024px) {
+  .toolbar-container {
+    padding-bottom: 60px;
+    background-color: transparent;
+  }
+  .contact-form > .background-images {
+    position: absolute;
+    display: inherit;
+  }
+
+  .background-images > img {
+    position: relative;
+    z-index: -1;
+  }
+
+  #contact-frame1 {
+    left: -400px;
+  }
+
+  #contact-frame2 {
+    top: 100px;
+    left: -250px;
+  }
+
+  #contact-frame3 {
+    left: 400px;
+  }
+
+
+  .welcome {
+    display: none;
+  }
+
+  nav.toggle-wrapper {
+    height: 40px;
+    width: 100%;
+  }
+
+  nav > .icon-wrapper {
+    display: none;
+  }
+
+  nav > ul {
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+    list-style: none;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+
+  nav > ul > li > a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+  }
+
+  .newline::after{
+    content: '\a';
+    white-space: pre;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, auto);
+  } 
+
+  .project-card {
+    width: 370px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+  }
+
+  .card {
+    width: 370px;
+  }
+
+  p.about-me-text {
+    width: 920px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  .about-me > h2 {
+    margin-bottom: 24px;
+  }
+
+  section.about-me {
+    background: url("assets/images/about-me-background.svg") no-repeat center center;
+    background-position-y: center;
+    background-position-y: -65px;
+  }
+
+  .contact-form {
+    display: flex;
+    max-width: 1150px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .my-email {
+    display: none;
+  }
+
+  .contact-form > form {
+    z-index: 1;
+    display: grid;
+    max-width: 685px;
+    flex-basis: unset;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  form > button {
+    position: relative;
+    left: -86px;
+  }
+  
+  .input {
+    max-width: unset; 
+  }
+
+  .input:nth-child(n + 3) {
+    grid-column: span 2;
+  }
+
+  .contact-title {
+    width: 470px;
+  }
+  
+  footer {
+    margin-top: 30px;
+    padding: 0;
+    border-top: 1px solid #dfe1e6;
+  }
+}
+
