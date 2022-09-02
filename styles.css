@@ -95,6 +95,10 @@ footer {
   color: #505f79;
 }
 
+nav > ul {
+  display: none;
+}
+
 .social ul {
   list-style: none;
   padding: 0;
@@ -357,14 +361,9 @@ a.mail-to {
   margin: 20px 0 40px 0;
 }
 
-nav > ul {
-  display: none;
-}
-
 .contact-form > .background-images {
   display: none;
-} 
-
+}
 
 @media screen and (min-width: 1024px) {
   .toolbar-container {
@@ -394,7 +393,6 @@ nav > ul {
     left: 400px;
   }
 
-
   .welcome {
     display: none;
   }
@@ -419,14 +417,13 @@ nav > ul {
     display: inline-block;
   }
 
-
   nav > ul > li > a {
     text-decoration: none;
     color: var(--black);
     font-weight: 550;
   }
 
-  .newline::after{
+  .newline::after {
     content: '\a';
     white-space: pre;
   }
@@ -505,5 +502,5 @@ nav > ul {
     padding: 0;
     border-top: 1px solid #dfe1e6;
   }
-}
 
+}
