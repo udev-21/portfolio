@@ -520,3 +520,31 @@ a.mail-to {
     border-top: 1px solid #dfe1e6;
   }
 }
+
+div.welcome > a > span:nth-child(1) {
+  --i:1;
+}
+
+div.welcome > a > span:nth-child(2) {
+  --i:2;
+}
+
+div.welcome > a > span:nth-child(3) {
+  --i:3;
+}
+
+div.welcome > a > span:nth-child(4) {
+  --i:4;
+}
+
+div.welcome > a > span:nth-child(5) {
+  --i:5;
+}
+
+div.welcome > a > span:nth-child(6) {
+  --i:6;
+}
+
+div.welcome > a > span:nth-child(7) {
+  --i:7;
+}
