@@ -554,3 +554,12 @@ div.welcome > a > span:nth-child(7) {
   animation: jump 2.5s infinite;
   animation-delay: calc(.1s * var(--i));
 }
+
+@keyframes jump {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-10px)
+  }
+}
