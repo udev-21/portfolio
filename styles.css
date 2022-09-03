@@ -548,3 +548,9 @@ div.welcome > a > span:nth-child(6) {
 div.welcome > a > span:nth-child(7) {
   --i:7;
 }
+
+.welcome span {
+  display: inline-block;
+  animation: jump 2.5s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
