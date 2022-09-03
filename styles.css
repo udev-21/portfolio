@@ -524,7 +524,7 @@ a.mail-to {
 .welcome span {
   display: inline-block;
   animation: jump 2.5s infinite;
-  animation-delay: calc(.1s * var(--i));
+  animation-delay: calc(0.1s * var(--i));
 }
 
 div.welcome > a > span:nth-child(1) {
@@ -559,10 +559,10 @@ div.welcome > a > span:nth-child(7) {
   0%,
   40%,
   100% {
-    transform: translateY(0)
+    transform: translateY(0);
   }
-  
+
   20% {
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 }
