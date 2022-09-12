@@ -233,10 +233,14 @@
     <section class="contact-form">
         <h2 class="contact-title">I'm always interested in hearing<span class="newline"></span> about new projects, so if you'd<span class="newline"></span>  like to chat please get in touch.</h2>
         <form action="https://formspree.io/f/mnqrnyba" method="POST">
-            <input type="text" name="fullname" class="input" placeholder="Firstname" maxlength="30" required>
-            <input type="text" class="input" name="lastname" placeholder="Lastname" maxlength="30" required>
-            <input type="email" name="email" class="input" placeholder="Email address" required>
-            <textarea name="message" id="message" class="input message" cols="30" rows="10" placeholder="Enter text here" maxlength="500" required></textarea>
+            <label for="fname" hidden>Firstname</label>
+            <input id="fname" type="text" name="firstname" class="input" placeholder="Firstname" maxlength="30" required>
+            <label for="lname" hidden>Lastname</label>
+            <input  id="lname" type="text" class="input" name="lastname" placeholder="Lastname" maxlength="30" required>
+            <label hidden for="e-mail">Email</label>
+            <input id="e-mail" type="text" name="email" class="input" placeholder="Email address" required>
+            <label hidden for="message">Message</label>
+            <textarea id="message" name="message" id="message" class="input message" cols="30" rows="10" placeholder="Enter text here" maxlength="500" required></textarea>
             <button type="submit" name="submit" class="button">Get in touch</button>
         </form>
         <div class="background-images">
