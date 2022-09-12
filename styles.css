@@ -576,9 +576,31 @@ div.welcome > a > span:nth-child(7) {
   height: 100%;
 }
 
-#mobile-menu > ul {
+#mobile-menu ul {
+  margin: 0 12px;
+  padding: 0;
   list-style: none;
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
+}
+
+#mobile-menu ul > li {
+  padding: 16px;
+}
+
+.menu-list {
+  position: relative;
+  top: 36px;
+}
+
+#mobile-menu > .icon-wrapper {
+  position: relative;
+  top: 24px;
+  left: calc(100% - 38px);
+  transform: none;
+}
+
+.d-none {
+  display: none !important;
 }
