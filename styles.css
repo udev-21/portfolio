@@ -594,6 +594,11 @@ div.welcome > a > span:nth-child(7) {
   padding: 16px;
 }
 
+#mobile-menu ul > li > a {
+  text-decoration: none;
+  color: var(--black);
+}
+
 .menu-list {
   position: relative;
   top: 36px;
