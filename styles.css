@@ -15,6 +15,10 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  top: 0;
 }
 
 .welcome {
@@ -373,8 +377,8 @@ a.mail-to {
 
 @media screen and (min-width: 1024px) {
   .toolbar-container {
-    padding-bottom: 60px;
-    background-color: transparent;
+    background-color: #fff;
+    z-index: 10;
   }
 
   #mobile-menu {
@@ -613,4 +617,8 @@ div.welcome > a > span:nth-child(7) {
 
 .d-none {
   display: none !important;
+}
+
+.active-section {
+  border-bottom: 1px solid var(--black);
 }
