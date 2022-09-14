@@ -50,6 +50,7 @@ window.onscroll = () => {
 const projects = [
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
+        fullTitle: "Keeping track of hundreds of components",
         technologies: ['Ruby on Rails', "CSS", "JavaScript", "HTML"],
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
@@ -58,6 +59,7 @@ const projects = [
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
+        fullTitle: "Multi-Post Stories Gain+Glory",
         technologies: ['Ruby on Rails', "CSS", "JavaScript", "HTML"],
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
@@ -66,6 +68,7 @@ const projects = [
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
+        fullTitle: "Multi-Post Stories Gain+Glory",
         technologies: ['Ruby on Rails', "CSS", "JavaScript", "HTML"],
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
@@ -74,6 +77,7 @@ const projects = [
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
+        fullTitle: "Multi-Post Stories Gain+Glory",
         technologies: ['Ruby on Rails', "CSS", "JavaScript", "HTML"],
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
@@ -82,6 +86,7 @@ const projects = [
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
+        fullTitle: "Multi-Post Stories Gain+Glory",
         technologies: ['Ruby on Rails', "CSS", "JavaScript", "HTML"],
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
@@ -90,6 +95,7 @@ const projects = [
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
+        fullTitle: "Multi-Post Stories Gain+Glory",
         technologies: ['Ruby on Rails', "CSS", "JavaScript", "HTML"],
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
@@ -150,22 +156,6 @@ projects.forEach((project, idx) =>  {
         
         popupProjectDetailWrapper.appendChild(projectImage);
 
-        let title = document.createElement("div");
-        title.classList.add('title');
-        title.innerHTML = project.title;
-
-        popupProjectDetailWrapper.appendChild(title);
-
-        popupProjectDetailWrapper.appendChild(projectStacks.cloneNode(true));
-
-        let projectDescription = document.createElement("p");
-        
-        projectDescription.classList.add('description');
-
-        projectDescription.innerText = project.description;
-
-        popupProjectDetailWrapper.appendChild(projectDescription);
-
         let buttonsWrapper = document.createElement('div');
         buttonsWrapper.classList.add('buttons-wrapper');
 
@@ -179,8 +169,34 @@ projects.forEach((project, idx) =>  {
         seeSourceButton.href = project.sourceLink;
         seeSourceButton.innerHTML = `See Source <img src="assets/icons/see-source.svg" alt="See Source">`;
         seeSourceButton.classList.add('button');
-
+        
         buttonsWrapper.append(seeLiveButton, seeSourceButton);
+
+        let titleWrapper = document.createElement("div");
+        titleWrapper.classList.add("title-wrapper");
+
+        let title = document.createElement("div");
+        title.classList.add('title');
+        title.innerHTML = project.fullTitle;
+
+        let desktopButtonWrapper = buttonsWrapper.cloneNode(true)
+        desktopButtonWrapper.classList.add('d-none');
+        titleWrapper.append(title, desktopButtonWrapper);
+
+        popupProjectDetailWrapper.appendChild(titleWrapper);
+
+        popupProjectDetailWrapper.appendChild(projectStacks.cloneNode(true));
+
+        let projectDescription = document.createElement("p");
+        
+        projectDescription.classList.add('description');
+
+        projectDescription.innerText = project.description;
+
+        popupProjectDetailWrapper.appendChild(projectDescription);
+
+        
+
 
         popupProjectDetailWrapper.appendChild(buttonsWrapper);
         popup.appendChild(popupProjectDetailWrapper);

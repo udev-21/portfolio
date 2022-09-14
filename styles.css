@@ -541,6 +541,7 @@ a.mail-to {
     max-width: 920px;
     min-height: calc(100% - 40px - 32px);
     margin: 0 auto;
+    margin-bottom: 100px;
   }
 
   .project-details-popup > .close-popup {
@@ -557,13 +558,13 @@ a.mail-to {
   }
   
   .project-details-popup > .title-wrapper > .title {
-    flex: 2;
+    flex: 5;
   }
 
   .project-details-popup > .title-wrapper > .buttons-wrapper {
-    flex: 1;
+    flex: 3;
     justify-content: end;
-    display: flex;
+    display: flex !important;
     column-gap: 14px;
     align-items: start;
   }
@@ -699,7 +700,7 @@ div.welcome > a > span:nth-child(7) {
   height: auto;
 }
 
-.project-details-popup > .title {
+.project-details-popup .title {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
@@ -715,8 +716,6 @@ div.welcome > a > span:nth-child(7) {
   font-size: 16px;
   line-height: 24px;
   color: #344563;
-  max-height: 200px;
-  overflow-y: scroll;
 }
 
 .project-details-popup > .buttons-wrapper {
@@ -732,15 +731,14 @@ div.welcome > a > span:nth-child(7) {
   right: 45px;
 }
 
-.project-details-popup > .buttons-wrapper > a > img {
+.project-details-popup .buttons-wrapper > a > img {
   position: relative;
   top: 3px;
 }
 
-.project-details-popup > .buttons-wrapper > .button {
+.project-details-popup .buttons-wrapper > .button {
   flex: 1;
 }
-
 
 .overflow-hidden {
   overflow: hidden;
