@@ -54,7 +54,7 @@ const projects = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
         sourceLink: "http://example.com",
-        imageLink: "/image.jpg",
+        imageLink: "assets/images/project-details-image.jpg",
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
@@ -62,7 +62,7 @@ const projects = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
         sourceLink: "http://example.com",
-        imageLink: "/image.jpg",
+        imageLink: "assets/images/project-details-image.jpg",
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
@@ -70,7 +70,7 @@ const projects = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
         sourceLink: "http://example.com",
-        imageLink: "/image.jpg",
+        imageLink: "assets/images/project-details-image.jpg",
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
@@ -78,7 +78,7 @@ const projects = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
         sourceLink: "http://example.com",
-        imageLink: "/image.jpg",
+        imageLink: "assets/images/project-details-image.jpg",
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
@@ -86,7 +86,7 @@ const projects = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
         sourceLink: "http://example.com",
-        imageLink: "/image.jpg",
+        imageLink: "assets/images/project-details-image.jpg",
     },
     {
         title: "Multi-Post Stories <span class=\"newline\"></span> Gain+Glory",
@@ -94,7 +94,7 @@ const projects = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         demoLink: "http://example.com",
         sourceLink: "http://example.com",
-        imageLink: "/image.jpg",
+        imageLink: "assets/images/project-details-image.jpg",
     }
 ];
 
@@ -125,6 +125,68 @@ projects.forEach((project, idx) =>  {
     seeProjectButton.dataset.id = idx;
     seeProjectButton.classList.add("button");
     seeProjectButton.innerText = "See Project";
+
+    seeProjectButton.addEventListener('click', (event) => {
+        document.body.classList.toggle("overflow-hidden");
+        let popup = document.createElement("section");
+        popup.id = "popup";
+        let popupProjectDetailWrapper = document.createElement("div");
+        popupProjectDetailWrapper.classList.add("project-details-popup");
+
+        let closePopup = new Image();
+        closePopup.src = "assets/icons/close-popup.svg";
+        closePopup.classList.add('close-popup');
+        closePopup.alt = "close popup";
+        closePopup.addEventListener('click', () => {
+            popup.remove();
+            document.body.classList.toggle('overflow-hidden');
+        });
+
+        popupProjectDetailWrapper.appendChild(closePopup);
+
+        let projectImage = new Image();
+        projectImage.src = project.imageLink;
+        projectImage.alt = "project details image";
+        
+        popupProjectDetailWrapper.appendChild(projectImage);
+
+        let title = document.createElement("div");
+        title.classList.add('title');
+        title.innerHTML = project.title;
+
+        popupProjectDetailWrapper.appendChild(title);
+
+        popupProjectDetailWrapper.appendChild(projectStacks.cloneNode(true));
+
+        let projectDescription = document.createElement("p");
+        
+        projectDescription.classList.add('description');
+
+        projectDescription.innerText = project.description;
+
+        popupProjectDetailWrapper.appendChild(projectDescription);
+
+        let buttonsWrapper = document.createElement('div');
+        buttonsWrapper.classList.add('buttons-wrapper');
+
+        let seeLiveButton = document.createElement("a");
+        seeLiveButton.href = project.demoLink;
+        seeLiveButton.innerHTML = `See Live <img src="assets/icons/see-live.svg" alt="See Live">`;
+        seeLiveButton.classList.add('button');
+
+
+        let seeSourceButton = document.createElement("a");
+        seeSourceButton.href = project.sourceLink;
+        seeSourceButton.innerHTML = `See Source <img src="assets/icons/see-source.svg" alt="See Source">`;
+        seeSourceButton.classList.add('button');
+
+        buttonsWrapper.append(seeLiveButton, seeSourceButton);
+
+        popupProjectDetailWrapper.appendChild(buttonsWrapper);
+        popup.appendChild(popupProjectDetailWrapper);
+        document.body.appendChild(popup);
+    })
+
     buttonWrapper.appendChild(seeProjectButton);
 
     projectInfo.append(projectTitle, projectStacks, buttonWrapper);
