@@ -528,6 +528,7 @@ a.mail-to {
     padding: 0;
     border-top: 1px solid #dfe1e6;
   }
+  
   #popup {
     z-index: 100;
     padding-top: 50px !important;
@@ -556,7 +557,7 @@ a.mail-to {
   .project-details-popup > .title-wrapper {
     display: flex;
   }
-  
+
   .project-details-popup > .title-wrapper > .title {
     flex: 5;
   }
@@ -569,12 +570,12 @@ a.mail-to {
     align-items: start;
   }
 
-  .project-details-popup > .title-wrapper > .buttons-wrapper > .button {
-    margin: 0;
-  }
-
   .project-details-popup > .buttons-wrapper {
     display: none !important;
+  }
+
+  .project-details-popup > .title-wrapper > .buttons-wrapper > .button {
+    margin: 0;
   }
 }
 
@@ -689,10 +690,8 @@ div.welcome > a > span:nth-child(7) {
   background: #fff;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
-  /* width: calc(100% - 32px - 32px); */
   min-height: calc(100% - 40px - 32px);
 }
-
 
 .project-details-popup > img {
   border-radius: 8px;
@@ -725,7 +724,7 @@ div.welcome > a > span:nth-child(7) {
 
 .project-details-popup > .close-popup {
   position: absolute;
-  background-color: #EBECF0;
+  background-color: #ebecf0;
   width: 32px;
   top: 45px;
   right: 45px;
