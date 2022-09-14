@@ -19,6 +19,7 @@ body {
   margin: 0 auto;
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .welcome {
@@ -527,6 +528,55 @@ a.mail-to {
     padding: 0;
     border-top: 1px solid #dfe1e6;
   }
+
+  #popup {
+    z-index: 100;
+    padding-top: 50px !important;
+  }
+
+  .project-details-popup {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    max-width: 920px;
+    min-height: calc(100% - 40px - 32px);
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  .project-details-popup > .close-popup {
+    position: relative !important;
+    width: 40px !important;
+    right: 0 !important;
+    top: 0 !important;
+    float: right;
+    margin-bottom: 10px;
+  }
+
+  .project-details-popup > .title-wrapper {
+    display: flex;
+  }
+
+  .project-details-popup > .title-wrapper > .title {
+    flex: 5;
+  }
+
+  .project-details-popup > .buttons-wrapper {
+    display: none !important;
+  }
+
+  .project-details-popup > .title-wrapper > .buttons-wrapper {
+    flex: 3;
+    justify-content: end;
+    display: flex !important;
+    column-gap: 14px;
+    align-items: start;
+  }
+
+  .project-details-popup > .title-wrapper > .buttons-wrapper > .button {
+    margin: 0;
+  }
 }
 
 .welcome span {
@@ -621,4 +671,74 @@ div.welcome > a > span:nth-child(7) {
 
 .active-section {
   border-bottom: 1px solid var(--black);
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  background-color: #c1c7d0f0;
+  padding: 20px 16px;
+  overflow-y: scroll;
+  scroll-padding: 20px;
+}
+
+.project-details-popup {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  min-height: calc(100% - 40px - 32px);
+}
+
+.project-details-popup > img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.project-details-popup .title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--black);
+}
+
+.project-details-popup > .project-stacks {
+  justify-content: start;
+}
+
+.project-details-popup > .description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.project-details-popup > .buttons-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.project-details-popup > .close-popup {
+  position: absolute;
+  background-color: #ebecf0;
+  width: 32px;
+  top: 45px;
+  right: 45px;
+}
+
+.project-details-popup .buttons-wrapper > a > img {
+  position: relative;
+  top: 3px;
+}
+
+.project-details-popup .buttons-wrapper > .button {
+  flex: 1;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
