@@ -528,6 +528,53 @@ a.mail-to {
     padding: 0;
     border-top: 1px solid #dfe1e6;
   }
+  #popup {
+    z-index: 100;
+    padding-top: 50px !important;
+  }
+
+  .project-details-popup {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    max-width: 920px;
+    min-height: calc(100% - 40px - 32px);
+    margin: 0 auto;
+  }
+
+  .project-details-popup > .close-popup {
+    position: relative !important;
+    width: 40px !important;
+    right: 0 !important;
+    top: 0 !important;
+    float: right;
+    margin-bottom: 10px;
+  }
+
+  .project-details-popup > .title-wrapper {
+    display: flex;
+  }
+  
+  .project-details-popup > .title-wrapper > .title {
+    flex: 2;
+  }
+
+  .project-details-popup > .title-wrapper > .buttons-wrapper {
+    flex: 1;
+    justify-content: end;
+    display: flex;
+    column-gap: 14px;
+    align-items: start;
+  }
+
+  .project-details-popup > .title-wrapper > .buttons-wrapper > .button {
+    margin: 0;
+  }
+
+  .project-details-popup > .buttons-wrapper {
+    display: none !important;
+  }
 }
 
 .welcome span {
