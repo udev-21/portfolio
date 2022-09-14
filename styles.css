@@ -528,7 +528,7 @@ a.mail-to {
     padding: 0;
     border-top: 1px solid #dfe1e6;
   }
-  
+
   #popup {
     z-index: 100;
     padding-top: 50px !important;
@@ -562,6 +562,10 @@ a.mail-to {
     flex: 5;
   }
 
+  .project-details-popup > .buttons-wrapper {
+    display: none !important;
+  }
+
   .project-details-popup > .title-wrapper > .buttons-wrapper {
     flex: 3;
     justify-content: end;
@@ -569,11 +573,7 @@ a.mail-to {
     column-gap: 14px;
     align-items: start;
   }
-
-  .project-details-popup > .buttons-wrapper {
-    display: none !important;
-  }
-
+  
   .project-details-popup > .title-wrapper > .buttons-wrapper > .button {
     margin: 0;
   }
