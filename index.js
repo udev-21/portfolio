@@ -220,3 +220,32 @@ myForm.addEventListener("submit", (event) => {
         event.preventDefault();
     }
 });
+
+let inputs = Array.from(document.getElementsByClassName("input"));
+
+let formInputValues = {
+    firstname:"",
+    lastname:"",
+    email: "",
+    message: "",
+};
+
+if (!localStorage.getItem('form')) {
+    localStorage.setItem('form', JSON.stringify(formInputValues));
+}else {
+    formInputValues = JSON.parse(localStorage.getItem('form'))
+    for (const key in formInputValues) {
+        if (Object.hasOwnProperty.call(formInputValues, key)) {
+            const value = formInputValues[key];
+            myForm.elements.namedItem(key).value = value;
+        }
+    }
+    
+}
+
+inputs.forEach((input) => {
+    input.addEventListener('change', (event) => {
+        formInputValues[input.getAttribute('name')] = input.value;
+        localStorage.setItem('form', JSON.stringify(formInputValues));
+    })
+})
