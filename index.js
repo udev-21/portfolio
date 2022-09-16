@@ -215,6 +215,8 @@ myForm.addEventListener("submit", (event) => {
     let emailInput = myForm.elements.namedItem("email");
     if(emailInput.value !== emailInput.value.toLowerCase()){
         emailInput.setCustomValidity("Expected only lower-case email address.");
+        myForm.reportValidity();
         event.preventDefault();
+        emailInput.setCustomValidity("");
     }
 });
