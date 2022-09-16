@@ -209,3 +209,12 @@ projects.forEach((project, idx) =>  {
     projectCard.appendChild(projectInfo);
     projectsWrapper.appendChild(projectCard);
 })
+
+const myForm = document.forms[0];
+myForm.addEventListener("submit", (event) => {
+    let emailInput = myForm.elements.namedItem("email");
+    if(emailInput.value !== emailInput.value.toLowerCase()){
+        emailInput.setCustomValidity("Expected only lower-case email address.");
+        event.preventDefault();
+    }
+});
