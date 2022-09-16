@@ -742,3 +742,11 @@ div.welcome > a > span:nth-child(7) {
 .overflow-hidden {
   overflow: hidden;
 }
+
+#errorMessage {
+  border: 1px solid rgb(236, 95, 95);
+  color: red;
+  font-size: 14px;
+  grid-column: span 2;
+  border-radius: 4px;
+}

@@ -213,10 +213,10 @@ projects.forEach((project, idx) =>  {
 const myForm = document.forms[0];
 myForm.addEventListener("submit", (event) => {
     let emailInput = myForm.elements.namedItem("email");
+    let errorMessage = document.getElementById("errorMessage");
     if(emailInput.value !== emailInput.value.toLowerCase()){
-        emailInput.setCustomValidity("Expected only lower-case email address.");
-        myForm.reportValidity();
+        errorMessage.innerText = "Expected only lower-case email address.";
+        errorMessage.classList.remove("d-none");
         event.preventDefault();
-        emailInput.setCustomValidity("");
     }
 });
